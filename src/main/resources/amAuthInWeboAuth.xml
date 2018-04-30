@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ServicesConfiguration
+        PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
+        "jar://com/sun/identity/sm/sms.dtd">
+<ServicesConfiguration>
+    <Service name="iPlanetAMAuthInWeboAuthService" version="1.0">
+        <Schema serviceHierarchy="/DSAMEConfig/authentication/iPlanetAMAuthInWeboAuthService"
+                i18nFileName="amAuthInWeboAuth"
+                revisionNumber="1"
+                i18nKey="inwebo.i18n.name"
+                resourceName="inWebo">
+            <Organization>
+                <AttributeSchema name="iplanet-am-auth-inwebo-base-url"
+                                 type="single"
+                                 syntax="string"
+                                 order="100"
+                                 i18nKey="inwebo.i18n.1.base.url"
+                                 resourceName="inWeboBaseUrl">
+                    <DefaultValues>
+                        <Value>https://api.myinwebo.com/FS</Value>
+                    </DefaultValues>
+                </AttributeSchema>
+                <AttributeSchema name="iplanet-am-auth-inwebo-service-id"
+                                 type="single"
+                                 syntax="number_range"
+                                 rangeStart="2"
+                                 rangeEnd="2147483647"
+                                 order="200"
+                                 i18nKey="inwebo.i18n.2.service.id"
+                                 resourceName="inWeboServiceId">
+                </AttributeSchema>
+                <AttributeSchema name="iplanet-am-auth-inwebo-certificate-path"
+                                 type="single"
+                                 syntax="string"
+                                 order="300"
+                                 i18nKey="inwebo.i18n.3.certificate.path"
+                                 resourceName="inWeboCertificatePath">
+                    <DefaultValues>
+                        <Value>/the/path/to/your/certificate.p12</Value>
+                    </DefaultValues>
+                </AttributeSchema>
+                <AttributeSchema name="iplanet-am-auth-inwebo-certificate-password"
+                                 type="single"
+                                 syntax="password"
+                                 order="400"
+                                 i18nKey="inwebo.i18n.4.certificate.password"
+                                 resourceName="inWeboCertificatePassword"/>
+                <AttributeSchema name="iplanet-am-auth-inwebo-proxy-url"
+                                 type="single"
+                                 syntax="string"
+                                 order="500"
+                                 i18nKey="inwebo.i18n.5.proxy.url"
+                                 resourceName="inWeboProxyUrl"/>
+                <AttributeSchema name="iplanet-am-auth-inwebo-proxy-username"
+                                 type="single"
+                                 syntax="string"
+                                 order="600"
+                                 i18nKey="inwebo.i18n.6.proxy.username"
+                                 resourceName="inWeboProxyUsername"/>
+                <AttributeSchema name="iplanet-am-auth-inwebo-proxy-password"
+                                 type="single"
+                                 syntax="password"
+                                 order="700"
+                                 i18nKey="inwebo.i18n.7.proxy.password"
+                                 resourceName="inWeboProxyPassword"/>
+                <AttributeSchema name="iplanet-am-auth-inwebo-auth-level"
+                                 type="single"
+                                 syntax="number_range" rangeStart="0" rangeEnd="2147483647"
+                                 i18nKey="a500"
+                                 order="800"
+                                 resourceName="authenticationLevel">
+                    <DefaultValues>
+                        <Value>0</Value>
+                    </DefaultValues>
+                </AttributeSchema>
+                <SubSchema name="serverconfig" inheritance="multiple" resourceName="USE-PARENT">
+                    <AttributeSchema name="iplanet-am-auth-inwebo-base-url"
+                                     type="single"
+                                     syntax="string"
+                                     order="100"
+                                     i18nKey="inwebo.i18n.1.base.url"
+                                     resourceName="inWeboBaseUrl">
+                        <DefaultValues>
+                            <Value>https://api.myinwebo.com/FS</Value>
+                        </DefaultValues>
+                    </AttributeSchema>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-service-id"
+                                     type="single"
+                                     syntax="number_range"
+                                     rangeStart="2"
+                                     rangeEnd="2147483647"
+                                     order="200"
+                                     i18nKey="inwebo.i18n.2.service.id"
+                                     resourceName="inWeboServiceId">
+                    </AttributeSchema>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-certificate-path"
+                                     type="single"
+                                     syntax="string"
+                                     order="300"
+                                     i18nKey="inwebo.i18n.3.certificate.path"
+                                     resourceName="inWeboCertificatePath">
+                        <DefaultValues>
+                            <Value>/the/path/to/your/certificate.p12</Value>
+                        </DefaultValues>
+                    </AttributeSchema>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-certificate-password"
+                                     type="single"
+                                     syntax="password"
+                                     order="400"
+                                     i18nKey="inwebo.i18n.4.certificate.password"
+                                     resourceName="inWeboCertificatePassword"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-proxy-url"
+                                     type="single"
+                                     syntax="string"
+                                     order="500"
+                                     i18nKey="inwebo.i18n.5.proxy.url"
+                                     resourceName="inWeboProxyUrl"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-proxy-username"
+                                     type="single"
+                                     syntax="string"
+                                     order="600"
+                                     i18nKey="inwebo.i18n.6.proxy.username"
+                                     resourceName="inWeboProxyUsername"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-proxy-password"
+                                     type="single"
+                                     syntax="password"
+                                     order="700"
+                                     i18nKey="inwebo.i18n.7.proxy.password"
+                                     resourceName="inWeboProxyPassword"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-auth-level"
+                                     type="single"
+                                     syntax="number_range" rangeStart="0" rangeEnd="2147483647"
+                                     i18nKey="a500"
+                                     order="800"
+                                     resourceName="authenticationLevel">
+                        <DefaultValues>
+                            <Value>0</Value>
+                        </DefaultValues>
+                    </AttributeSchema>
+                </SubSchema>
+            </Organization>
+        </Schema>
+    </Service>
+</ServicesConfiguration>
