@@ -22,9 +22,9 @@
 1. copy Resource:
 
     ```bash
-    $ sudo unzip forgerock-am-*.zip -d /tmp/forgerock-am
-    $ sudo cp -R /tmp/forgerock-am/edit-webapp/XUI/* /path/to/tomcat/webapps/openam/XUI/
-    $ sudo cp /tmp/forgerock-am/edit-webapp/WEB-INF/lib/forgerock-am-*.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/
+    $ sudo unzip iw-forgerock-am-*.zip -d /tmp/iw-forgerock-am
+    $ sudo cp -R /tmp/iw-forgerock-am/edit-webapp/XUI/* /path/to/tomcat/webapps/openam/XUI/
+    $ sudo cp /tmp/forgerock-am/edit-webapp/WEB-INF/lib/iw-forgerock-am-*.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/
     $ sudo cp /tmp/forgerock-am/edit-webapp/WEB-INF/lib/idp-connector-auth-repackage-0.3.0.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/   
     ```
 4. restart tomcat.
