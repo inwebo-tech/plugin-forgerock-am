@@ -12,18 +12,12 @@
             <directory>${project.build.directory}/edit-webapp/</directory>
             <outputDirectory>edit-webapp/</outputDirectory>
             <useDefaultExcludes>true</useDefaultExcludes>
-            <directoryMode>0755</directoryMode>
-            <fileMode>0644</fileMode>
-            <filtered>true</filtered>
         </fileSet>
         <fileSet>
             <directory>${project.build.directory}</directory>
             <outputDirectory>edit-webapp/WEB-INF/lib</outputDirectory>
-            <directoryMode>0755</directoryMode>
-            <fileMode>0644</fileMode>
-            <filtered>true</filtered>
             <includes>
-                <include>forgerock-am-${project.version}.jar</include>
+                <include>iw-forgerock-am-${project.version}.jar</include>
             </includes>
             <excludes>
                 <exclude>*-tests.jar</exclude>
