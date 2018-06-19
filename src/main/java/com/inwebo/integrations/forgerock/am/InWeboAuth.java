@@ -17,18 +17,23 @@ import java.security.Principal;
 import java.util.Map;
 import java.util.Properties;
 import java.util.ResourceBundle;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
 
 import static com.inwebo.integrations.auth.InWeboRestAuthenticator.RESULT_CODE_OK;
 import static com.inwebo.integrations.auth.Property.*;
 import static com.sun.identity.authentication.util.ISAuthConstants.LOGIN_SUCCEED;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getIntMapAttr;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getMapAttr;
+import static java.util.logging.Level.ALL;
 
 public class InWeboAuth extends AMLoginModule {
 
   // Name for the DEBUG-log
   private final static String DEBUG_NAME = "InWeboAuth";
   private final static Debug DEBUG = Debug.getInstance(DEBUG_NAME);
+
+  private final static Logger LOGGER = Logger.getLogger(DEBUG_NAME);
 
   // Name of the resource bundle
   private final static String amAuthInweboAuth = "amAuthInWeboAuth";
@@ -43,7 +48,7 @@ public class InWeboAuth extends AMLoginModule {
   private InWeboRestAuthenticator inWeboRestAuthenticator;
   private String sharedUserName;
 
-  private InWeboAuth() {
+  public InWeboAuth() {
     super();
   }
 
@@ -70,7 +75,13 @@ public class InWeboAuth extends AMLoginModule {
           property.setProperty(PROXY_PASSWORD.key(), proxyPassword);
         }
       }
-      this.inWeboRestAuthenticator = new InWeboRestAuthenticator(property);
+      for (final Handler handler : LOGGER.getHandlers()) {
+        LOGGER.removeHandler(handler);
+      }
+      final Handler handler = new InWeboCustomHandler(DEBUG);
+      handler.setLevel(ALL);
+      LOGGER.addHandler(handler);
+      this.inWeboRestAuthenticator = new InWeboRestAuthenticator(property, LOGGER);
     } catch (final Exception e) {
       DEBUG.error("InWeboAuthModule::init - Internal Error", e);
     }
