@@ -34,7 +34,7 @@ $ ./mvnw -U -s .mvn/settings.xml clean package
 
 1. goto to Admin console and Login as `amadmin`
 2. navigate to {REALM}->Authentification->Modules
-3. add new module with `inWebo Authentication Type`
+3. add new module with `inWebo Authenticator` Type
 ![add new module](doc/images/inWeboAuthCreateModule.png)
 ![config new module](doc/images/inWeboAuthEditConfig.png)
 4. to test config goto `http(s)://{OPENAM_HOST}/openam/XUI/#login/&module=inWeboTest`
