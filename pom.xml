@@ -24,7 +24,7 @@
         <maven.compiler.optimize>false</maven.compiler.optimize>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <forgerock.am.version>5.5.1</forgerock.am.version>
+        <forgerock.am.version>6.0.0</forgerock.am.version>
         <idp-connector-auth.version>0.3.0</idp-connector-auth.version>
         <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
     </properties>

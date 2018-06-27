@@ -6,9 +6,9 @@
     <Service name="iPlanetAMAuthInWeboAuthService" version="1.0">
         <Schema serviceHierarchy="/DSAMEConfig/authentication/iPlanetAMAuthInWeboAuthService"
                 i18nFileName="amAuthInWeboAuth"
-                revisionNumber="1"
+                revisionNumber="10"
                 i18nKey="inwebo.i18n.name"
-                resourceName="inWebo">
+                resourceName="inwebo">
             <Organization>
                 <AttributeSchema name="iplanet-am-auth-inwebo-base-url"
                                  type="single"
@@ -65,12 +65,14 @@
                                  resourceName="inWeboProxyPassword"/>
                 <AttributeSchema name="iplanet-am-auth-inwebo-auth-level"
                                  type="single"
-                                 syntax="number_range" rangeStart="0" rangeEnd="2147483647"
+                                 syntax="number_range"
+                                 rangeStart="0"
+                                 rangeEnd="2147483647"
                                  i18nKey="a500"
                                  order="800"
                                  resourceName="authenticationLevel">
                     <DefaultValues>
-                        <Value>0</Value>
+                        <Value>1</Value>
                     </DefaultValues>
                 </AttributeSchema>
                 <SubSchema name="serverconfig" inheritance="multiple" resourceName="USE-PARENT">
@@ -129,12 +131,14 @@
                                      resourceName="inWeboProxyPassword"/>
                     <AttributeSchema name="iplanet-am-auth-inwebo-auth-level"
                                      type="single"
-                                     syntax="number_range" rangeStart="0" rangeEnd="2147483647"
+                                     syntax="number_range"
+                                     rangeStart="0"
+                                     rangeEnd="2147483647"
                                      i18nKey="a500"
                                      order="800"
                                      resourceName="authenticationLevel">
                         <DefaultValues>
-                            <Value>0</Value>
+                            <Value>1</Value>
                         </DefaultValues>
                     </AttributeSchema>
                 </SubSchema>
