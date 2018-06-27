@@ -27,3 +27,15 @@ $ ./mvnw -U -s .mvn/settings.xml clean package
     $ sudo cp /tmp/forgerock-am/edit-webapp/WEB-INF/lib/idp-connector-auth-repackage-0.3.0.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/   
     ```
 4. restart tomcat.
+
+## Configuration myinWebo:
+
+## Configuration in forgerock-am:
+
+1. goto to Admin console and Login as `amadmin`
+2. navigate to {REALM}->Authentification->Modules
+3. add new module with `inWebo Authentication Type`
+![add new module](doc/images/inWeboAuthCreateModule.png)
+![config new module](doc/images/inWeboAuthEditConfig.png)
+4. to test config goto `http(s)://{OPENAM_HOST}/openam/XUI/#login/&module=inWeboTest`
+![XUI Login Page](doc/images/inWeboAuthLoginXUIPage.png)
