@@ -12,7 +12,9 @@
  --------------------
  
  ```bash
-$ ./mvnw -U -s .mvn/settings.xml clean package
+ $ git clone https://github.com/inwebo-tech/plugin-forgerock-am.git
+ $ plugin-forgerock-am 
+$ ./mvnw clean package
  ```
  
  Installation
