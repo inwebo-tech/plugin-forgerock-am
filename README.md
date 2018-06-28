@@ -13,8 +13,8 @@
  
  ```bash
  $ git clone https://github.com/inwebo-tech/plugin-forgerock-am.git
- $ plugin-forgerock-am 
-$ ./mvnw clean package
+ $ cd plugin-forgerock-am 
+ $ ./mvnw clean package
  ```
  
  Installation
