@@ -30,6 +30,12 @@ $ ./mvnw -U -s .mvn/settings.xml clean package
 
 ## Configuration myinWebo:
 
+1. Connect to inWebo administration console
+1. Navigate to the appropriate service view
+1. Go to `Secure Sites` and click on the `Download a new certificate for the API` button
+1. Do not forget to set the certificate Right `Authentication` option to `Yes`
+[myInWeboConfig](doc/images/myInWeboConfig.png)
+
 ## Configuration in forgerock-am:
 
 1. goto to Admin console and Login as `amadmin`
