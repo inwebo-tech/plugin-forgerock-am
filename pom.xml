@@ -32,6 +32,7 @@
 
     <modules>
         <module>iw-forgerock-am-otp</module>
+        <module>iw-forgerock-am-push</module>
     </modules>
 
     <dependencyManagement>
