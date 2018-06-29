@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.inwebo.integrations.forgerock</groupId>
-    <artifactId>iw-forgerock-am</artifactId>
+    <artifactId>plugin-forgerock-am</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-
 
     <properties>
         <java.version>1.8</java.version>
@@ -27,75 +27,73 @@
         <forgerock.am.version>6.0.0</forgerock.am.version>
         <idp-connector-auth.version>0.3.0</idp-connector-auth.version>
         <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
+        <main.dir>${project.basedir}</main.dir>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.inwebo.integrations</groupId>
-            <artifactId>idp-connector-auth-repackage</artifactId>
-            <version>${idp-connector-auth.version}</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/edit-webapp/WEB-INF/lib/idp-connector-auth-repackage-0.3.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.forgerock.am</groupId>
-            <artifactId>openam-core</artifactId>
-            <version>${forgerock.am.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.forgerock.am</groupId>
-            <artifactId>openam-shared</artifactId>
-            <version>${forgerock.am.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>iw-forgerock-am-otp</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.inwebo.integrations</groupId>
+                <artifactId>idp-connector-auth-repackage</artifactId>
+                <version>${idp-connector-auth.version}</version>
+                <scope>system</scope>
+                <systemPath>${main.dir}/lib/idp-connector-auth-repackage-0.3.0.jar</systemPath>
+            </dependency>
+            <dependency>
+                <groupId>org.forgerock.am</groupId>
+                <artifactId>openam-core</artifactId>
+                <version>${forgerock.am.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.forgerock.am</groupId>
+                <artifactId>openam-shared</artifactId>
+                <version>${forgerock.am.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.5</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <tarLongFileMode>posix</tarLongFileMode>
-                    <appendAssemblyId>false</appendAssemblyId>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <descriptors>
-                        <descriptor>${project.basedir}/src/assembly/assembly.xml</descriptor>
-                    </descriptors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>create-archive</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.7.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                        <tarLongFileMode>posix</tarLongFileMode>
+                        <appendAssemblyId>false</appendAssemblyId>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <descriptors>
+                            <descriptor>${project.basedir}/src/assembly/assembly.xml</descriptor>
+                        </descriptors>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>create-archive</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>

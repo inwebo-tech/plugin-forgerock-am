@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+    <id>dist</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${main.dir}/lib</directory>
+            <outputDirectory>edit-webapp/WEB-INF/lib</outputDirectory>
+            <excludes>
+                <exclude>*-tests.jar</exclude>
+                <exclude>*-javadoc.jar</exclude>
+                <exclude>*-sources.jar</exclude>
+            </excludes>
+            <useDefaultExcludes>true</useDefaultExcludes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>edit-webapp/WEB-INF/lib</outputDirectory>
+            <includes>
+                <include>iw-forgerock-am-otp-${project.version}.jar</include>
+            </includes>
+            <excludes>
+                <exclude>*-tests.jar</exclude>
+                <exclude>*-javadoc.jar</exclude>
+                <exclude>*-sources.jar</exclude>
+            </excludes>
+            <useDefaultExcludes>true</useDefaultExcludes>
+        </fileSet>
+    </fileSets>
+</assembly>
