@@ -3,8 +3,8 @@
         PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"
         "jar://com/sun/identity/sm/sms.dtd">
 <ServicesConfiguration>
-    <Service name="iPlanetAMAuthInWeboAuthService" version="1.0">
-        <Schema serviceHierarchy="/DSAMEConfig/authentication/iPlanetAMAuthInWeboAuthService"
+    <Service name="iPlanetAMAuthInWeboOtpAuthService" version="1.0">
+        <Schema serviceHierarchy="/DSAMEConfig/authentication/iPlanetAMAuthInWeboOtpAuthService"
                 i18nFileName="amAuthInWeboAuth"
                 revisionNumber="10"
                 i18nKey="inwebo.i18n.name"

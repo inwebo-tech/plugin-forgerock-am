@@ -1,4 +1,4 @@
-package com.inwebo.integrations.forgerock.am;
+package com.inwebo.integrations.forgerock.am.otp;
 
 import com.sun.identity.shared.debug.Debug;
 

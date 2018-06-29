@@ -1,4 +1,4 @@
-package com.inwebo.integrations.forgerock.am;
+package com.inwebo.integrations.forgerock.am.otp;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -11,13 +11,13 @@ import java.security.Principal;
  * Authorization Principal for InWebo Security.
  * This is required by the authorization interface.
  */
-public class InWeboAuthPrincipal implements Principal, Serializable {
+public class InWeboOtpAuthPrincipal implements Principal, Serializable {
 
     private static final long serialVersionUID = -4375241626363474200L;
 
     private final String name;
 
-    public InWeboAuthPrincipal(final String name) {
+    public InWeboOtpAuthPrincipal(final String name) {
         this.name = name;
     }
 

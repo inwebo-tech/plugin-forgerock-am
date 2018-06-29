@@ -15,6 +15,7 @@
     <properties>
         <main.dir>${project.basedir}/..</main.dir>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.inwebo.integrations</groupId>

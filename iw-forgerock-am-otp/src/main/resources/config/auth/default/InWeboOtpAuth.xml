@@ -3,7 +3,7 @@
         "=//iPlanet//Authentication Module Properties XML Interface 1.0 DTD//EN"
         "jar://com/sun/identity/authentication/Auth_Module_Properties.dtd">
 
-<ModuleProperties moduleName="InWeboAuth" version="1.0" >
+<ModuleProperties moduleName="InWeboOtpAuth" version="1.0" >
     <Callbacks length="0" order="1" timeout="600" header="#NOT SHOWN#" />
     <Callbacks length="2" order="2" timeout="600" header="#TO BE SUBSTITUTED#">
         <NameCallback isRequired="true">

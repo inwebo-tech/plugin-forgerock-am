@@ -1,4 +1,4 @@
-package com.inwebo.integrations.forgerock.am;
+package com.inwebo.integrations.forgerock.am.otp;
 
 import com.inwebo.integrations.auth.InWeboRestAuthenticator;
 import com.inwebo.repackaged.org.json.simple.JSONObject;
@@ -27,10 +27,10 @@ import static com.sun.identity.shared.datastruct.CollectionHelper.getIntMapAttr;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getMapAttr;
 import static java.util.logging.Level.ALL;
 
-public class InWeboAuth extends AMLoginModule {
+public class InWeboOtpAuth extends AMLoginModule {
 
   // Name for the DEBUG-log
-  private final static String DEBUG_NAME = "InWeboAuth";
+  private final static String DEBUG_NAME = "InWeboOtpAuth";
   private final static Debug DEBUG = Debug.getInstance(DEBUG_NAME);
 
   private final static Logger LOGGER = Logger.getLogger(DEBUG_NAME);
@@ -48,7 +48,7 @@ public class InWeboAuth extends AMLoginModule {
   private InWeboRestAuthenticator inWeboRestAuthenticator;
   private String sharedUserName;
 
-  public InWeboAuth() {
+  public InWeboOtpAuth() {
     super();
   }
 
@@ -153,7 +153,7 @@ public class InWeboAuth extends AMLoginModule {
 
   @Override
   public Principal getPrincipal() {
-    return new InWeboAuthPrincipal(this.sharedUserName);
+    return new InWeboOtpAuthPrincipal(this.sharedUserName);
   }
 
   @Override
