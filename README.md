@@ -29,19 +29,19 @@
     ```
 4. restart tomcat.
 
-## Configuration myinWebo:
+## inWebo service configuration:
 
-1. Connect to inWebo administration console.
+1. Log in to the inWebo administration console.
 1. Navigate to the appropriate service view.
 1. Go to `Secure Sites` and click on the `Download a new certificate for the API` button.
-1. Do not forget to set the certificate Right `Authentication` option to `Yes`.
+1. Remember to set the Certificate `Authentication` option to `Yes`.
 ![myInWeboConfig](doc/images/myInWeboConfig.png)
 
-## Configuration in forgerock-am:
+## forgerock-am Configuration:
 
-1. Goto to Admin console and Login as `amadmin`.
+1. Goto to Admin Console and log in as `amadmin`.
 2. Navigate to {REALM}->Authentification->Modules.
-3. Add new module with `inWebo Authenticator` Type.
+3. Add new module with `inWebo Authentication` Type.
 ![add new module](doc/images/inWeboAuthCreateModule.png)
 ![config new module](doc/images/inWeboAuthEditConfig.png)
 4. To test config goto `http(s)://{OPENAM_HOST}/openam/XUI/#login/&module=inWeboTest`
