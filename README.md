@@ -37,7 +37,7 @@
 1. Remember to set the Certificate `Authentication` option to `Yes`.
 ![myInWeboConfig](doc/images/myInWeboConfig.png)
 
-## forgerock-am Configuration:
+## forgerock-am configuration:
 
 1. Goto to Admin Console and log in as `amadmin`.
 2. Navigate to {REALM}->Authentification->Modules.
