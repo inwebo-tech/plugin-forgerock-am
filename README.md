@@ -39,10 +39,10 @@
 
 ## forgerock-am configuration:
 
-1. Goto to Admin Console and log in as `amadmin`.
+1. Go to Admin Console and log in as `amadmin`.
 2. Navigate to {REALM}->Authentification->Modules.
 3. Add new module with `inWebo Authentication` Type.
 ![add new module](doc/images/inWeboAuthCreateModule.png)
 ![config new module](doc/images/inWeboAuthEditConfig.png)
-4. To test config goto `http(s)://{OPENAM_HOST}/openam/XUI/#login/&module=inWeboTest`
+4. To test config go to `http(s)://{OPENAM_HOST}/openam/XUI/#login/&module=inWeboTest`
 ![XUI Login Page](doc/images/inWeboAuthLoginXUIPage.png)
