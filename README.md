@@ -25,6 +25,7 @@
  1. Go to `Secure Sites` and click on the `Download a new certificate for the API` button.
  1. Remember to set the Certificate `Authentication` option to `Yes`.
  ![myInWeboConfig](doc/images/myInWeboConfig.png)
+ 1. Synchronize your forgerock-am login with inWebo login.
  
  [Installation inWebo Otp Authenticator Plugin](iw-forgerock-am-otp)
  -------------------------------------------------------------------
