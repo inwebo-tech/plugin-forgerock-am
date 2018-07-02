@@ -13,18 +13,15 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.PasswordCallback;
 import javax.security.auth.login.LoginException;
 import java.security.Principal;
-import java.util.Arrays;
 import java.util.Map;
 import java.util.Properties;
 import java.util.ResourceBundle;
-import java.util.logging.Handler;
 import java.util.logging.Logger;
 
 import static com.inwebo.integrations.auth.Property.*;
 import static com.sun.identity.authentication.util.ISAuthConstants.LOGIN_SUCCEED;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getIntMapAttr;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getMapAttr;
-import static java.util.logging.Level.ALL;
 
 public class InWeboOtpAuth extends AMLoginModule {
 

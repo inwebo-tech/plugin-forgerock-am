@@ -17,7 +17,6 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.concurrent.*;
-import java.util.logging.Handler;
 import java.util.logging.Logger;
 
 import static com.inwebo.integrations.auth.Property.*;
@@ -26,7 +25,6 @@ import static com.sun.identity.shared.datastruct.CollectionHelper.getIntMapAttr;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getMapAttr;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.MINUTES;
-import static java.util.logging.Level.ALL;
 
 public class InWeboPushAuth extends AMLoginModule {
 
