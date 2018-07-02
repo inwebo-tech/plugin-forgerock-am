@@ -61,13 +61,13 @@ public class InWeboPushAuth extends AMLoginModule {
       this.sharedState = sharedState;
       this.bundle = amCache.getResBundle(amAuthInWeboPushAuth, getLoginLocale());
       final Properties property = new Properties();
-      property.setProperty(BASE_URL.key(), getMapAttr(options, "iplanet-am-auth-inwebo-base-url"));
-      property.setProperty(SERVICE_ID.key(), String.valueOf(getIntMapAttr(options, "iplanet-am-auth-inwebo-service-id", 0, DEBUG)));
-      property.setProperty(CERTIFICATE_PATH.key(), getMapAttr(options, "iplanet-am-auth-inwebo-certificate-path"));
-      property.setProperty(CERTIFICATE_PASSWORD.key(), getMapAttr(options, "iplanet-am-auth-inwebo-certificate-password"));
-      final String proxyUri = getMapAttr(options, "iplanet-am-auth-inwebo-proxy-url");
-      final String proxyUserName = getMapAttr(options, "iplanet-am-auth-inwebo-proxy-username");
-      final String proxyPassword = getMapAttr(options, "iplanet-am-auth-inwebo-proxy-password");
+      property.setProperty(BASE_URL.key(), getMapAttr(options, "iplanet-am-auth-inwebo-push-base-url"));
+      property.setProperty(SERVICE_ID.key(), String.valueOf(getIntMapAttr(options, "iplanet-am-auth-inwebo-push-service-id", 0, DEBUG)));
+      property.setProperty(CERTIFICATE_PATH.key(), getMapAttr(options, "iplanet-am-auth-inwebo-push-certificate-path"));
+      property.setProperty(CERTIFICATE_PASSWORD.key(), getMapAttr(options, "iplanet-am-auth-inwebo-push-certificate-password"));
+      final String proxyUri = getMapAttr(options, "iplanet-am-auth-inwebo-push-proxy-url");
+      final String proxyUserName = getMapAttr(options, "iplanet-am-auth-inwebo-push-proxy-username");
+      final String proxyPassword = getMapAttr(options, "iplanet-am-auth-inwebo-push-proxy-password");
       if (StringUtils.isNotBlank(proxyUri)) {
         property.setProperty(PROXY_URI.key(), proxyUri);
         if (StringUtils.isNotBlank(proxyUserName) && StringUtils.isNotBlank(proxyPassword)) {

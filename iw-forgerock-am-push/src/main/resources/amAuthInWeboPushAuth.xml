@@ -8,62 +8,62 @@
                 i18nFileName="amAuthInWeboPushAuth"
                 revisionNumber="10"
                 i18nKey="inwebo.i18n.name"
-                resourceName="inwebo">
+                resourceName="inWeboPush">
             <Organization>
-                <AttributeSchema name="iplanet-am-auth-inwebo-base-url"
+                <AttributeSchema name="iplanet-am-auth-inwebo-push-base-url"
                                  type="single"
                                  syntax="string"
                                  order="100"
                                  i18nKey="inwebo.i18n.1.base.url"
-                                 resourceName="inWeboBaseUrl">
+                                 resourceName="inWeboPushBaseUrl">
                     <DefaultValues>
                         <Value>https://api.myinwebo.com/FS</Value>
                     </DefaultValues>
                 </AttributeSchema>
-                <AttributeSchema name="iplanet-am-auth-inwebo-service-id"
+                <AttributeSchema name="iplanet-am-auth-inwebo-push-service-id"
                                  type="single"
                                  syntax="number_range"
                                  rangeStart="2"
                                  rangeEnd="2147483647"
                                  order="200"
                                  i18nKey="inwebo.i18n.2.service.id"
-                                 resourceName="inWeboServiceId">
+                                 resourceName="inWeboPushServiceId">
                 </AttributeSchema>
-                <AttributeSchema name="iplanet-am-auth-inwebo-certificate-path"
+                <AttributeSchema name="iplanet-am-auth-inwebo-push-certificate-path"
                                  type="single"
                                  syntax="string"
                                  order="300"
                                  i18nKey="inwebo.i18n.3.certificate.path"
-                                 resourceName="inWeboCertificatePath">
+                                 resourceName="inWeboPushCertificatePath">
                     <DefaultValues>
                         <Value>/the/path/to/your/certificate.p12</Value>
                     </DefaultValues>
                 </AttributeSchema>
-                <AttributeSchema name="iplanet-am-auth-inwebo-certificate-password"
+                <AttributeSchema name="iplanet-am-auth-inwebo-push-certificate-password"
                                  type="single"
                                  syntax="password"
                                  order="400"
                                  i18nKey="inwebo.i18n.4.certificate.password"
-                                 resourceName="inWeboCertificatePassword"/>
+                                 resourceName="inWeboPushCertificatePassword"/>
                 <AttributeSchema name="iplanet-am-auth-inwebo-proxy-url"
                                  type="single"
                                  syntax="string"
                                  order="500"
                                  i18nKey="inwebo.i18n.5.proxy.url"
-                                 resourceName="inWeboProxyUrl"/>
-                <AttributeSchema name="iplanet-am-auth-inwebo-proxy-username"
+                                 resourceName="inWeboPushProxyUrl"/>
+                <AttributeSchema name="iplanet-am-auth-inwebo-push-proxy-username"
                                  type="single"
                                  syntax="string"
                                  order="600"
                                  i18nKey="inwebo.i18n.6.proxy.username"
-                                 resourceName="inWeboProxyUsername"/>
-                <AttributeSchema name="iplanet-am-auth-inwebo-proxy-password"
+                                 resourceName="inWeboPushProxyUsername"/>
+                <AttributeSchema name="iplanet-am-auth-inwebo-push-proxy-password"
                                  type="single"
                                  syntax="password"
                                  order="700"
                                  i18nKey="inwebo.i18n.7.proxy.password"
-                                 resourceName="inWeboProxyPassword"/>
-                <AttributeSchema name="iplanet-am-auth-inwebo-auth-level"
+                                 resourceName="inWeboPushProxyPassword"/>
+                <AttributeSchema name="iplanet-am-auth-inwebo-push-auth-level"
                                  type="single"
                                  syntax="number_range"
                                  rangeStart="0"
@@ -76,60 +76,60 @@
                     </DefaultValues>
                 </AttributeSchema>
                 <SubSchema name="serverconfig" inheritance="multiple" resourceName="USE-PARENT">
-                    <AttributeSchema name="iplanet-am-auth-inwebo-base-url"
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-base-url"
                                      type="single"
                                      syntax="string"
                                      order="100"
                                      i18nKey="inwebo.i18n.1.base.url"
-                                     resourceName="inWeboBaseUrl">
+                                     resourceName="inWeboPushBaseUrl">
                         <DefaultValues>
                             <Value>https://api.myinwebo.com/FS</Value>
                         </DefaultValues>
                     </AttributeSchema>
-                    <AttributeSchema name="iplanet-am-auth-inwebo-service-id"
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-service-id"
                                      type="single"
                                      syntax="number_range"
                                      rangeStart="2"
                                      rangeEnd="2147483647"
                                      order="200"
                                      i18nKey="inwebo.i18n.2.service.id"
-                                     resourceName="inWeboServiceId">
+                                     resourceName="inWeboPushServiceId">
                     </AttributeSchema>
-                    <AttributeSchema name="iplanet-am-auth-inwebo-certificate-path"
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-certificate-path"
                                      type="single"
                                      syntax="string"
                                      order="300"
                                      i18nKey="inwebo.i18n.3.certificate.path"
-                                     resourceName="inWeboCertificatePath">
+                                     resourceName="inWeboPushCertificatePath">
                         <DefaultValues>
                             <Value>/the/path/to/your/certificate.p12</Value>
                         </DefaultValues>
                     </AttributeSchema>
-                    <AttributeSchema name="iplanet-am-auth-inwebo-certificate-password"
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-certificate-password"
                                      type="single"
                                      syntax="password"
                                      order="400"
                                      i18nKey="inwebo.i18n.4.certificate.password"
-                                     resourceName="inWeboCertificatePassword"/>
-                    <AttributeSchema name="iplanet-am-auth-inwebo-proxy-url"
+                                     resourceName="inWeboPushCertificatePassword"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-proxy-url"
                                      type="single"
                                      syntax="string"
                                      order="500"
                                      i18nKey="inwebo.i18n.5.proxy.url"
-                                     resourceName="inWeboProxyUrl"/>
-                    <AttributeSchema name="iplanet-am-auth-inwebo-proxy-username"
+                                     resourceName="inWeboPushProxyUrl"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-proxy-username"
                                      type="single"
                                      syntax="string"
                                      order="600"
                                      i18nKey="inwebo.i18n.6.proxy.username"
-                                     resourceName="inWeboProxyUsername"/>
-                    <AttributeSchema name="iplanet-am-auth-inwebo-proxy-password"
+                                     resourceName="inWeboPushProxyUsername"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-proxy-password"
                                      type="single"
                                      syntax="password"
                                      order="700"
                                      i18nKey="inwebo.i18n.7.proxy.password"
-                                     resourceName="inWeboProxyPassword"/>
-                    <AttributeSchema name="iplanet-am-auth-inwebo-auth-level"
+                                     resourceName="inWeboPushProxyPassword"/>
+                    <AttributeSchema name="iplanet-am-auth-inwebo-push-auth-level"
                                      type="single"
                                      syntax="number_range"
                                      rangeStart="0"
