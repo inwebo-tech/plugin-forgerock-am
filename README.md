@@ -63,7 +63,7 @@
 1. Go to Admin Console and log in as `amadmin`.
 2. Navigate to {REALM}->Authentification->Modules.
 3. Add new module with `inWebo OTP Authenticator` Type.
-![add new module](doc/images/inWeboOtpAuthCreateModule.png)
-![config new module](doc/images/inWeboOtpAuthEditConfig.png)
-4. To test config go to `http(s)://{OPENAM_HOST}/openam/XUI/#login/&module=inWeboOtpTest`
-![XUI Login Page](doc/images/inWeboOtpAuthLoginPage.png)
+![add new module](doc/images/inWeboPushAuthCreateModule.png)
+![config new module](doc/images/inWeboPushAuthEditConfig.png)
+4. To test config go to `http(s)://{OPENAM_HOST}/openam/XUI/#login/&module=inWeboPushTest`
+![XUI Login Page](doc/images/inWeboPushAuthLoginPage.png)
