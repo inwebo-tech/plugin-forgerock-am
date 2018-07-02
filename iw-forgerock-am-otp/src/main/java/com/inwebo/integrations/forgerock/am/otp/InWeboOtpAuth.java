@@ -51,6 +51,7 @@ public class InWeboOtpAuth extends AMLoginModule {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public void init(final Subject subject, final Map sharedState, final Map options) {
     if (DEBUG.messageEnabled()) {
       DEBUG.message("InWeboOtpAuthModule::init");
