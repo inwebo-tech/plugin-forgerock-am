@@ -13,6 +13,7 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.PasswordCallback;
 import javax.security.auth.login.LoginException;
 import java.security.Principal;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Properties;
 import java.util.ResourceBundle;
@@ -30,7 +31,6 @@ public class InWeboOtpAuth extends AMLoginModule {
   // Name for the DEBUG-log
   private final static String DEBUG_NAME = "InWeboOtpAuth";
   private final static Debug DEBUG = Debug.getInstance(DEBUG_NAME);
-
   private final static Logger LOGGER = Logger.getLogger(DEBUG_NAME);
 
   // Name of the resource bundle
@@ -74,12 +74,6 @@ public class InWeboOtpAuth extends AMLoginModule {
           property.setProperty(PROXY_PASSWORD.key(), proxyPassword);
         }
       }
-      for (final Handler handler : LOGGER.getHandlers()) {
-        LOGGER.removeHandler(handler);
-      }
-      final Handler handler = new InWeboCustomHandler(DEBUG);
-      handler.setLevel(ALL);
-      LOGGER.addHandler(handler);
       this.inWeboRestAuthenticator = new InWeboRestAuthenticator(property, LOGGER);
     } catch (final Exception e) {
       DEBUG.error("InWeboOtpAuthModule::init - Internal Error", e);

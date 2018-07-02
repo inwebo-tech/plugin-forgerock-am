@@ -77,12 +77,6 @@ public class InWeboPushAuth extends AMLoginModule {
           property.setProperty(PROXY_PASSWORD.key(), proxyPassword);
         }
       }
-      for (final Handler handler : LOGGER.getHandlers()) {
-        LOGGER.removeHandler(handler);
-      }
-      final Handler handler = new InWeboCustomHandler(DEBUG);
-      handler.setLevel(ALL);
-      LOGGER.addHandler(handler);
       this.inWeboRestAuthenticator = new InWeboRestAuthenticator(property, LOGGER);
     } catch (final Exception e) {
       DEBUG.error("InWeboPushAuthModule::init - Internal Error", e);
