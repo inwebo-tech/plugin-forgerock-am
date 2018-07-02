@@ -4,13 +4,13 @@
         "jar://com/sun/identity/authentication/Auth_Module_Properties.dtd">
 
 <ModuleProperties moduleName="InWeboOtpAuth" version="1.0" >
-    <Callbacks length="0" order="1" timeout="600" header="InWebo Authenticator (OTP)" />
-    <Callbacks length="2" order="2" timeout="600" header="InWebo Authenticator (OTP)">
+    <Callbacks length="0" order="1" timeout="600" header="#NOT SHOWN#" />
+    <Callbacks length="2" order="2" timeout="600" header="#TO BE SUBSTITUTED#">
         <NameCallback isRequired="true">
-            <Prompt>User Name:</Prompt>
+            <Prompt>#USERNAME#</Prompt>
         </NameCallback>
         <PasswordCallback echoPassword="false" >
-            <Prompt>OTP:</Prompt>
+            <Prompt>#PASSWORD#</Prompt>
         </PasswordCallback>
     </Callbacks>
     <Callbacks length="1" order="3" timeout="600" header="#TO BE SUBSTITUTED#" error="true" >

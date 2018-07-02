@@ -4,10 +4,10 @@
         "jar://com/sun/identity/authentication/Auth_Module_Properties.dtd">
 
 <ModuleProperties moduleName="InWeboPushAuth" version="1.0" >
-    <Callbacks length="0" order="1" timeout="600" header="InWebo Authenticator (Push)" />
-    <Callbacks length="1" order="2" timeout="600" header="InWebo Authenticator (Push)">
+    <Callbacks length="0" order="1" timeout="600" header="#NOT SHOWN#" />
+    <Callbacks length="1" order="2" timeout="600" header="#TO BE SUBSTITUTED#">
         <NameCallback isRequired="true">
-            <Prompt>User Name:</Prompt>
+            <Prompt>#USERNAME#</Prompt>
         </NameCallback>
     </Callbacks>
     <Callbacks length="1" order="3" timeout="600" header="#TO BE SUBSTITUTED#" error="true" >

@@ -34,7 +34,7 @@ public class InWeboOtpAuth extends AMLoginModule {
   private final static Logger LOGGER = Logger.getLogger(DEBUG_NAME);
 
   // Name of the resource bundle
-  private final static String amAuthInweboAuth = "amAuthInWeboAuth";
+  private final static String amAuthInWeboOtpAuth = "amAuthInWeboOtpAuth";
 
   // Orders defined in the callbacks file
   private final static int STATE_BEGIN = 1;
@@ -57,7 +57,7 @@ public class InWeboOtpAuth extends AMLoginModule {
     }
     try {
       this.sharedState = sharedState;
-      this.bundle = amCache.getResBundle(amAuthInweboAuth, getLoginLocale());
+      this.bundle = amCache.getResBundle(amAuthInWeboOtpAuth, getLoginLocale());
       final Properties property = new Properties();
       property.setProperty(BASE_URL.key(),getMapAttr(options, "iplanet-am-auth-inwebo-base-url"));
       property.setProperty(SERVICE_ID.key(),  String.valueOf(getIntMapAttr(options, "iplanet-am-auth-inwebo-service-id", 0, DEBUG)));
