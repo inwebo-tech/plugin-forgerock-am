@@ -112,7 +112,7 @@ public class InWeboPushAuth extends AMLoginModule {
     this.sharedUserName = getUserName(NameCallback.class.cast(callbacks[0]));
     final String sessionId = inWeboRestAuthenticator.sendPush(sharedUserName);
     if (StringUtils.isNotBlank(sessionId)) {
-      final ExecutorService executorService = Executors.newCachedThreadPool();
+      final ExecutorService executorService = Executors.newSingleThreadExecutor();
       try {
         final Boolean authorize = executorService.submit(checkPush(sessionId, sharedUserName))
                                                  .get(2L, MINUTES);
