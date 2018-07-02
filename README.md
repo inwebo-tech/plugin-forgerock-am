@@ -37,7 +37,7 @@
     ```
 1. restart tomcat.
 
-### Configuration:
+#### Configuration:
 
 1. Go to Admin Console and log in as `amadmin`.
 2. Navigate to {REALM}->Authentification->Modules.
@@ -58,7 +58,7 @@
      ```
  1. restart tomcat.
 
-### Configuration:
+#### Configuration:
 
 1. Go to Admin Console and log in as `amadmin`.
 2. Navigate to {REALM}->Authentification->Modules.
