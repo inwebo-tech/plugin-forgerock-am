@@ -30,6 +30,13 @@
         <main.dir>${project.basedir}</main.dir>
     </properties>
 
+    <scm>
+        <connection>scm:git:git@github.com:inwebo-tech/plugin-forgerock-am.git</connection>
+        <developerConnection>scm:git:git@github.com:inwebo-tech/plugin-forgerock-am.git</developerConnection>
+        <url>https://github.com/inwebo-tech/plugin-forgerock-am</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <modules>
         <module>iw-forgerock-am-otp</module>
         <module>iw-forgerock-am-push</module>
@@ -72,7 +79,11 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.7.0</version>
                 </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>2.17</version>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
