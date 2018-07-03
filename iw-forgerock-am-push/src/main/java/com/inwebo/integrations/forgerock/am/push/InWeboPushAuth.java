@@ -1,7 +1,6 @@
 package com.inwebo.integrations.forgerock.am.push;
 
 import com.inwebo.integrations.auth.InWeboRestAuthenticator;
-import com.inwebo.repackaged.org.json.simple.JSONObject;
 import com.sun.identity.authentication.spi.AMLoginModule;
 import com.sun.identity.authentication.spi.AuthLoginException;
 import com.sun.identity.authentication.spi.InvalidPasswordException;
@@ -16,14 +15,12 @@ import java.security.Principal;
 import java.util.Map;
 import java.util.Properties;
 import java.util.ResourceBundle;
-import java.util.concurrent.*;
 import java.util.logging.Logger;
 
 import static com.inwebo.integrations.auth.Property.*;
 import static com.sun.identity.authentication.util.ISAuthConstants.LOGIN_SUCCEED;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getIntMapAttr;
 import static com.sun.identity.shared.datastruct.CollectionHelper.getMapAttr;
-import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.MINUTES;
 
 public class InWeboPushAuth extends AMLoginModule {
@@ -102,45 +99,13 @@ public class InWeboPushAuth extends AMLoginModule {
   private int authenticatePushValidator(final Callback[] callbacks) throws AuthLoginException {
     // Get data from callbacks. Refer to callbacks XML file.
     this.sharedUserName = getUserName(NameCallback.class.cast(callbacks[0]));
-    final String sessionId = inWeboRestAuthenticator.sendPush(sharedUserName);
-    if (StringUtils.isNotBlank(sessionId)) {
-      final ExecutorService executorService = Executors.newSingleThreadExecutor();
-      try {
-        final Boolean authorize = executorService.submit(checkPush(sessionId, sharedUserName))
-                                                 .get(2L, MINUTES);
-        if (authorize) {
-          return LOGIN_SUCCEED;
-        }
-      } catch (final InterruptedException | ExecutionException e) {
-        throw new AuthLoginException("InWeboPushAuthModule::auth - internal error", e);
-      } catch (final TimeoutException ignored) {
-      } finally {
-        executorService.shutdown();
-        try {
-          if (!executorService.awaitTermination(800, MILLISECONDS)) {
-            executorService.shutdownNow();
-          }
-        } catch (final InterruptedException e) {
-          executorService.shutdownNow();
-        }
-      }
+    final boolean result = inWeboRestAuthenticator.authorizeByPush(sharedUserName, 2L, MINUTES);
+    if (result) {
+      return LOGIN_SUCCEED;
+    } else {
+      throw new InvalidPasswordException("Access Denied", sharedUserName);
     }
-    if (DEBUG.errorEnabled()) {
-      DEBUG.error("InWeboPushAuthModule::auth - Login by '{}' failed", sharedUserName);
-    }
-    throw new InvalidPasswordException("Access Denied", sharedUserName);
   }
-
-  private Callable<Boolean> checkPush(final String sessionId, final String login) {
-    return () -> {
-      JSONObject result = inWeboRestAuthenticator.checkPush(login, sessionId);
-      while (result != null && "NOK:WAITING".equals(result.get("err"))) {
-        result = inWeboRestAuthenticator.checkPush(login, sessionId);
-      }
-      return result != null && "OK".equals(result.get("err"));
-    };
-  }
-
 
   private String getUserName(final NameCallback nc) {
     String userName = getSharedUserName();

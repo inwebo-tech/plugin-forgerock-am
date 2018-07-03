@@ -18,7 +18,7 @@ Installation:
     ```bash
     $ sudo unzip iw-forgerock-am-otp-*.zip -d /tmp/forgerock-am-opt
     $ sudo cp /tmp/forgerock-am-opt/edit-webapp/WEB-INF/lib/iw-forgerock-am-otp-*.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/
-    $ sudo cp /tmp/forgerock-am-opt/edit-webapp/WEB-INF/lib/idp-connector-auth-repackage-0.3.0.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/   
+    $ sudo cp /tmp/forgerock-am-opt/edit-webapp/WEB-INF/lib/idp-connector-auth-repackage-1.0.0.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/   
     ```
 1. restart tomcat.
 

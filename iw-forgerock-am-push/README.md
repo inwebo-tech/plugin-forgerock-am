@@ -19,7 +19,7 @@ Installation:
      ```bash
      $ sudo unzip iw-forgerock-am-push-*.zip -d /tmp/forgerock-am-push
      $ sudo cp /tmp/forgerock-am-push/edit-webapp/WEB-INF/lib/iw-forgerock-am-push-*.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/
-     $ sudo cp /tmp/forgerock-am-push/edit-webapp/WEB-INF/lib/idp-connector-auth-repackage-0.3.0.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/   
+     $ sudo cp /tmp/forgerock-am-push/edit-webapp/WEB-INF/lib/idp-connector-auth-repackage-1.0.0.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/   
      ```
  1. restart tomcat.
 
