@@ -31,7 +31,6 @@ pom.xml.versionsBackup
 release.properties
 dump.rdb
 interpolated*.xml
-lib/
 manifest.yml
 overridedb.*
 target
