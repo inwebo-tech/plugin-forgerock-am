@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>iw-forgerock-am-otp</artifactId>
+    <name>inWebo ForgeRock AM OTP Authenticator Module</name>
 
     <properties>
         <main.dir>${project.basedir}/..</main.dir>

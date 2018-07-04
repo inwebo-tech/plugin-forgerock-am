@@ -8,7 +8,7 @@
     <artifactId>plugin-forgerock-am</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>inWebo ForgeRock AM Custom Authentication Module</name>
+    <name>inWebo ForgeRock AM Custom Module</name>
     <url>https://github.com/inwebo-tech/plugin-forgerock-am</url>
 
     <issueManagement>
