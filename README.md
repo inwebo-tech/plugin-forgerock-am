@@ -1,5 +1,5 @@
- inWebo ForgeRock AM Custom Authentication Module
- =======================================================
+ inWebo ForgeRock AM Custom Module
+ =================================
  
  Requirements
  ------------
