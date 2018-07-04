@@ -8,6 +8,28 @@
     <artifactId>plugin-forgerock-am</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+    <name>inWebo ForgeRock AM Custom Authentication Module</name>
+    <url>https://github.com/inwebo-tech/plugin-forgerock-am</url>
+
+    <issueManagement>
+        <url>https://github.com/inwebo-tech/plugin-forgerock-am/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:inwebo-tech/plugin-forgerock-am.git</connection>
+        <developerConnection>scm:git:git@github.com:inwebo-tech/plugin-forgerock-am.git</developerConnection>
+        <url>https://github.com/inwebo-tech/plugin-forgerock-am</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <java.version>1.8</java.version>
@@ -29,14 +51,6 @@
         <spring-boot.version>2.0.1.RELEASE</spring-boot.version>
         <main.dir>${project.basedir}</main.dir>
     </properties>
-
-    <scm>
-        <connection>scm:git:git@github.com:inwebo-tech/plugin-forgerock-am.git</connection>
-        <developerConnection>scm:git:git@github.com:inwebo-tech/plugin-forgerock-am.git</developerConnection>
-        <url>https://github.com/inwebo-tech/plugin-forgerock-am</url>
-        <tag>HEAD</tag>
-    </scm>
-
     <modules>
         <module>iw-forgerock-am-otp</module>
         <module>iw-forgerock-am-push</module>
