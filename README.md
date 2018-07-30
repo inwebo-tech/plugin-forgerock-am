@@ -20,7 +20,7 @@
  Installation:
  -------------
  
- 1. [Installation inWebo Otp Authenticator Plugin](iw-forgerock-am-otp/README.md)
- 1. [Installation inWebo Push Authenticator Plugin](iw-forgerock-am-push/README.md)
+ 1. [Installation inWebo Otp Authenticator Plugin](https://github.com/inwebo-tech/plugin-forgerock-am/blob/master/iw-forgerock-am-otp/README.md)
+ 1. [Installation inWebo Push Authenticator Plugin](https://github.com/inwebo-tech/plugin-forgerock-am/blob/master/iw-forgerock-am-push/README.md)
  
  :warning: **If you want to install both plugins, be sure to use the same version for the plugins.**
