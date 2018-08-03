@@ -28,7 +28,7 @@
  How to debug
  ------------
   
- 1. Go to http(s)://{OPENAM_HOST}/openam/Debug.jsp
+ 1. Go to http(s)://{OPENAM_HOST}/forgerock-am/Debug.jsp
  1. Click the Category dropdown.
  1. Select Configuration and set level to Message.
  1. Click Submit.
